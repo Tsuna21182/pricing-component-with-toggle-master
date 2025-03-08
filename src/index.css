@@ -1,0 +1,19 @@
+@import "tailwindcss";
+
+@theme {
+  /* Neutral */
+
+  --color-VeryLightGrayishBlue: #f6f6fe;
+  --color-LightGrayishBlue: #b3b5c6;
+  --color-GrayishBlue: #6d708d;
+  --color-DarkGrayishBlue: #494c5f;
+
+  /* linear gradient */
+
+  --color-primero: #a3a8f0;
+  --color-segundo: #696fdd;
+
+  /* font */
+
+  --font-display: "Montserrat", sans-serif;
+}
