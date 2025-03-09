@@ -1,11 +1,12 @@
-import { useState } from "react";
+type BtnChangeProps = {
+  isOn: boolean;
+  setIsOn: React.Dispatch<React.SetStateAction<boolean>>;
+};
 
-function BtnChance() {
-  const [isOn, setIsOn] = useState(false);
-
+function BtnChange({ isOn, setIsOn }: BtnChangeProps) {
   return (
     <button
-      className="bg-linear-to-r from-primero to-segundo w-9 h-5 rounded-xl cursor-pointer "
+      className="bg-gradient-to-r from-primero to-segundo w-9 h-5 rounded-xl cursor-pointer "
       onClick={() => setIsOn(!isOn)}
     >
       <div
@@ -17,4 +18,4 @@ function BtnChance() {
   );
 }
 
-export default BtnChance;
+export default BtnChange;
