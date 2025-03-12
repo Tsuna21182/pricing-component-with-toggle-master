@@ -18,9 +18,9 @@ function App() {
         <BtnChange isOn={isOn} setIsOn={setIsOn} />
         <p className="text-LightGrayishBlue">Monthly</p>
       </div>
-      <div className="grid sm:grid-cols-3 gap-2 m-10 md:px-5 lg:px-10 xl:px-30">
-        {pricingData.map((item) => (
-          <Card key={item.id} item={item} />
+      <div className="grid sm:grid-cols-3 gap-1 m-10 md:px-2 lg:px-10 xl:px-38">
+        {pricingData.map((item, index) => (
+          <Card key={item.id} item={item} index={index} />
         ))}
       </div>
     </>

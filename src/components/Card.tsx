@@ -8,15 +8,14 @@ type CardProps = {
     description: string;
     users: string;
     send: string;
-    background: string;
-    textColor: string;
   };
+  index: number;
 };
 
-function Card({ item }: CardProps) {
+function Card({ item, index }: CardProps) {
   return (
     <div
-      className={`flex flex-col items-center justify-center bg-white p-5 rounded-lg shadow-sm shadow-LightGrayishBlue ${item.background} ${item.textColor}`}
+      className={`flex flex-col items-center justify-center bg-white p-5 rounded-lg shadow-sm shadow-LightGrayishBlue odd:bg-white even:bg-gradient-to-r from-primero to-segundo odd:text-GrayishBlue even:text-white sm:odd:h-[25rem] sm:even:h-[27rem] sm:even:mt-[-15px]`}
     >
       <p className=" font-semibold">{item.name}</p>
       <p className=" font-bold text-3xl mt-4 border-b-1 border-LightGrayishBlue pb-4 w-full text-center">
@@ -31,7 +30,7 @@ function Card({ item }: CardProps) {
       <p className=" font-semibold mt-5 border-b-1 border-LightGrayishBlue pb-4 w-full text-center">
         {item.send}
       </p>
-      <Btn />
+      <Btn index={index} />
     </div>
   );
 }
